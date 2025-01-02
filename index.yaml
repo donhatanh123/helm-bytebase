@@ -1,0 +1,20 @@
+apiVersion: v1
+entries:
+  bytebase:
+  - apiVersion: v2
+    created: "2025-01-02T08:39:48.368244419Z"
+    description: Safe database schema change and version control for DevOps teams.
+    digest: 5095f26dc890550a16568eb907c9cd43fb5e747d65c15a79548b308a016d37e5
+    home: https://bytebase.com/
+    icon: https://raw.githubusercontent.com/bytebase/bytebase.com/main/public/images/logo.svg
+    maintainers:
+    - email: support@bytebase.com
+      name: Bytebase
+    name: bytebase
+    sources:
+    - https://github.com/bytebase/bytebase
+    type: application
+    urls:
+    - https://github.com/donhatanh123/helm-bytebase/releases/download/bytebase-1.1.1/bytebase-1.1.1.tgz
+    version: 1.1.1
+generated: "2025-01-02T08:39:48.368254197Z"
