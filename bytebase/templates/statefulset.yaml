@@ -32,20 +32,20 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: "{{ .Values.statefulsetPrefix }}{{ .Release.Name }}{{ .Values.statefulsetSuffix }}"
+  name: {{ template "bytebase.option.name" . }}
   namespace: {{ template "bytebase.namespace" . }}
   labels:
     {{- include "bytebase.labels" . | nindent 4}}
 spec:
   selector:
     matchLabels:
-      app: bytebase
-  serviceName: "bytebase"
+      app: {{ template "bytebase.option.name" . }}
+  serviceName: {{ template "bytebase.option.name" . }}
   replicas: 1
   template:
     metadata:
       labels:
-        app: bytebase
+        app: {{ template "bytebase.option.name" . }}
     spec:
       {{- if $externalPgEscapePgPassword }}
       # If user specify the externalPgEscapePgPassword, we should escape the password in the PG_URL in the shell,

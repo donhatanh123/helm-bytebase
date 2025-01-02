@@ -79,5 +79,3 @@ bytebase:
   # An empty key with operator Exists matches all keys, values and effects which means this will tolerate everything.
   tolerations:
     - operator: "Exists"
-serviceSuffix: -my-svc-suffix
-statefulsetSuffix: -my-sts-suffix
