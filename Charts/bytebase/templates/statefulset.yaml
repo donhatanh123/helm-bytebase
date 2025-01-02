@@ -32,7 +32,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ template "bytebase.option.name" . }}
+  name: "{{ .Values.statefulsetPrefix }}{{ .Release.Name }}{{ .Values.statefulsetSuffix }}"
   namespace: {{ template "bytebase.namespace" . }}
   labels:
     {{- include "bytebase.labels" . | nindent 4}}
